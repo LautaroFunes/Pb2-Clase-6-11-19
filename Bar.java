@@ -22,6 +22,8 @@ public class Bar {
 
 ---Despues del recreo /Orden Nombre y apellido/ --->
 	
+	
+
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
@@ -35,6 +37,12 @@ public class Bar {
 		clientes = new TreeSet<Cliente>(orden);
 	}
 
+	public void cambiarOrdenamiento(Comparator orden) {
+		Set<Cliente> clientesOrdenados = new TreeSet(orden);
+			clientesOrdenados.addAll(clientes);
+			clientes = clientesOrdenados;
+	}
+	
 	public void agregarCliente(Cliente cliente) {
 		clientes.add(cliente);
 	}
