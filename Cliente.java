@@ -66,7 +66,7 @@ public class Cliente implements Comparable<Cliente> {
 
 	@Override
 	public int compareTo(Cliente o) {
-		return this.dni.compareTo(o.dni);
+		return this.dni.compareTo(o.dni());
 	}
 
 }
